@@ -1,0 +1,27 @@
+# Importing pygame module
+import pygame
+from pygame.locals import *
+
+# initiate pygame and give permission
+# to use pygame's functionality.
+pygame.init()
+
+# create the display surface object
+# of specific dimension.
+window = pygame.display.set_mode((1080,1080))
+
+# Fill the scree with white color
+window.fill((128, 128, 128))
+
+# Using draw.rect module of
+# pygame to draw the solid rectangle
+pygame.draw.rect(window, (0, 0, 255),
+				[100, 100, 400, 100], 0)
+
+# pygame to draw the solid circle
+pygame.draw.circle(window, (0, 255, 0), 
+                   [300, 300], 170, 3)
+
+# Draws the surface object to the screen.
+pygame.display.update()
+pygame.time.wait(1000)  # Smooth frame rate

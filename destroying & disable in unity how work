@@ -1,0 +1,30 @@
+destroying & disable
+
+Sometimes it is better to disable objects instead of destroying them.
+for time work learn in C #
+
+how use 
+1. new project in Unity
+2. Take gameobject cube in 3d
+3. cube 2 with help and like (hero, villain)
+4. Created an add component(MonoBehaviour code, box collain )
+5. add attach for sricpty villan cube
+6. Use  box collain attach hero.
+7. play button 
+
+--> unity code:-
+
+public class DisableAfterTime: MonoBehaviour
+{
+    void Start()
+    {
+        Invoke("DisableObject", 5f);
+    }
+ 
+    void DisableObject()
+    {
+        gameObject.SetActive(false);
+    }
+}
+Advantage: 
+Improves performance. Useful for object pooling
